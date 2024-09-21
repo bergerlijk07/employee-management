@@ -1,0 +1,21 @@
+server:
+    port: 8888
+
+spring:
+    application:
+        name: config-server
+    
+    cloud:
+        config:
+            server:
+                git:
+                    uri: https://github.com/bergerlijk07/config-server.git
+                    cloneOnStart: true
+                    default-label: main
+                    
+
+eureka:
+    instance:
+        client:
+            serverUrl:
+                defaultZone: http://localhost:8761/eureka
